@@ -32,4 +32,13 @@ char toLower(char c){
 ### Ventajas: 
 - No se extiende para el caso mas común
 
+## Forma de almacenaje
+
+0xxxxxxx <br>
+110xxxxx 10xxxxxx <br>
+1110xxxx 10xxxxxx 10xxxxxx <br>
+
+> 0 ->
+> 110 
+
 
