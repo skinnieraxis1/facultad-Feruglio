@@ -12,3 +12,16 @@ Las funciones en Haskell tienen lo llamado Transparencia Referencial:
 - Sin efecto(No produce ningún efecto externo solo devuelve un valor)
 `F :: Number -> Number`
 `F x = 2 * x`
+Funciones parciales -> Sirven para acotar el dominio de la función
+
+## Maneras de definir funciones
+
+# Función 
+`take :: Number -> String -> String`
+`take 2 "Hola"` Aplicamos take con 2 y hola `"Ho`
+
+`take 2` -> Una función
+`f = take 2`
+`f "Hola"` -> `Ho`
+No podremos hacer `f = take "Hola"`
+(`take` "Hola")
