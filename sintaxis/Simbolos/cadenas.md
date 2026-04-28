@@ -30,3 +30,7 @@ s = h*t / length(h*t) = 1 + length(t)
 
 ```
 > Aplicamos la recursividad para generar un contador, llegará a su tope cuando quede la cadena vacia (Σ) como t. Esto hará que el último número lo de la única situación exacta | ``length(Σ) = 0``
+
+## Tarea:
+- Especificar y implementar length
+- Lenguaje del libro de much
