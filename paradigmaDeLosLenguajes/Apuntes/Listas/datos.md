@@ -59,6 +59,14 @@ filter (<"o") ["a", "b", "p", "q"]
 > ["a", "b"]
 ```
 
+### sum
+```
+sum [1,2,3]
+> 6
+sum [1..10]
+> 55
+```
+
 ### All
 ```
 ALL:: (t->t) -> []t -> Bool
@@ -74,4 +82,85 @@ ANY (>8)[1, 2] -> FALSE
 ANY (>8)[1, 9] -> TRUE
 ANY (>8)[] -> FALSE
 ```
+
+### Even
+```
+ANY:: (t->t) -> []t -> Bool
+ANY (>8)[1, 2] -> FALSE
+ANY (>8)[1, 9] -> TRUE
+ANY (>8)[] -> FALSE
+```
+
+
+### Reduce
+#### Ejemplo MARIO
+Iteramos en *comer* para que el mario (modificado) vaya "creciendo"
+```
+Comer::Mario->Comida->Mario
+```
+> No existe el **efecto**, es solo input output, a misma entrada misma salida
+
+### Foldl
+Pone el primer valor, *raiz*, al principio
+```
+foldl (+) 10 [1, 2, 3]
+> 16
+
+foldl (+) 0 [1, 2, 3]
+> 6
+
+foldl (++) " " ["hola", "mundo"]
+> " holamundo"
+
+foldl (--) 10 [1,2,3]
+> 4
+```
+> 0 al ser el neutro de la suma funciona como si empezaramos solo ocn la lista
+
+### Foldr
+Pone el primer valor, *raiz*, al final
+```
+foldr (++) " " ["hola", "mundo"]
+> "holamundo "
+
+foldr (--) 10 [1, 2, 3]
+> -8
+```
+## Composición
+### ORDEN SUPERIOR
+Funciones que reciben funciones y devuelven funciones
+### Aplicación parcial
+Funciones que reciben funciones para ejecutar la función que devuelven y devolver la propia variable
+
+```
+(.) :: (b->c)->(a->b)->a->c --|
+       (b->c)->(a->b)->(a->c) |-->Son lo mismo
+```
+> Todas las funciones son de 1 parametro, por lo que los últimos parametros siempre seran a despues c, no importa si aclaramos que es una función o no. <br> 
+> ``a->b->c == a->(b->c) == (a->b)->c``
+
+### EJemplo
+
+-- Lista de numeros -> la sumatoria DE los dobles DE los pares
+```
+floca :: [Number] -> Number
+floca = sum . map (*2) . filter even
+```
+> (.) -> Compone entre funciones
+
+```
+:t [even, odd]
+[even, odd] :: [Numer -> Bool]
+```
+> - Funcion es un tipo con tipos adentro typeA -> typeB <br>
+> - Lista es un tipo con tipos adentro [typeA]
+
+## Data
+
+```
+
+
+```
+
+
 
