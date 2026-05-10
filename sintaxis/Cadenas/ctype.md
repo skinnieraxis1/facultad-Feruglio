@@ -1,4 +1,3 @@
-# Interfaz ctype.h
 ## Implementar ctype.h
 ### toupper && tolower -> Con precondiciones
 
@@ -49,3 +48,33 @@ static void Test(PunteroAFuncion toupper){
 ```
 
 ***
+
+### IsCadenaVacio
+
+IsCadenaVacia: E* -> Bool/ <br/>
+IsCadenaVacia(s) = Length(s) > 0 => False <br/>
+IsCadenaVacia(s) = Length(s) = 0 => True <br/>
+
+o
+
+IsCadenaVacia(s) = s = e => True <br/>
+IsCadenaVacia(s) = s != e => False <br/>
+
+### Length
+
+```
+int longitud(char string[]){
+    int long = 0;
+    if(palabra !='\0'){
+        long = 1 + longitud(string);
+    }
+    return long;
+}
+```
+
+### Repetir
+
+Repetir(s,n) = s^n <br> 
+-- n=0 || s=e <br>
+-- : s * repetir(s, n-1)
+
