@@ -29,8 +29,10 @@ Estas podrán ser utilizadas por cualquier usuario y/o aplicación, sin necesida
 
 Estas tendrán los permisos restringidos, solo podrán utilizarlas ciertos usuarios con permisos adecuados
 
-## Ciclo de instrucciones (Sin contar interrupciones)
+## Ciclo de instrucciones
 
 El ciclo de procesado de instrucciones, o más bien sentencias, consta de 3 pasos.
 - **Fetch**: Para empezar el procesador, el que corre las instrucciones, debe saber cual es la próxima operación a correr. Para esto se fija cual es la siguiente y la pone en el ciclo
-- **Decode**: En este proceso lo que haremos será 
+- **Decode**: En este proceso lo que haremos será decodificar la instrucción. Si bien podemos confundir este proceso con el proceso de compilación de los lenguajes como c a Assembler, la realidad es que Assembler también debe ser decoficado, que es lo que se realiza en este paso. Este código de ensamblaje se decodifica y se lo pasa a la CPU para el siguiente paso
+- **Execute**: Es el propio paso de ejecución, una ves realizado el decode, con los procesos en ceros y unos realiza el CPU con los cambios que esto produzca 
+
