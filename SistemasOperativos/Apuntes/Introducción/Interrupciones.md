@@ -60,7 +60,7 @@ El ciclo de instrucciones con las interrupciones solo agrega un paso que verific
 8. Corremos la forma de tratar la interrupción
 9. Devolvemos los datos que guardamos al procesador
 10. Cargamos el PSW que habíamos guardado previamente y luego cargamos el PC, que apunta a la siguiente instrucción. Como la siguiente instrucción se ejecuta directamente despues de poner el PC, primer cargamos el PSW
-11. Volvemos a activar las interrupciones
+11. Volvemos a activar las
 
 ### Múltiples interrupciones
 Es algo muy común cuando se tratan las interrupciones, acá hay 3 caminos que seguir:
